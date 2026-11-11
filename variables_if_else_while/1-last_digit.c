@@ -4,22 +4,24 @@
 
 /**
  * main - Initializes function to print
- * a comparison of n's value.
- * if & if else: Compare's
+ * a comparison of that last value of n.
+ * if & if else: Compares n to integer values.
  * Return: returns 0
  */
 int main(void)
 {
 	int n;
+	int l;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("Last string of %i is ", n);
-	if (n > 5)
+	l = n % 10;
+	printf("Last digit of %i is %d ", n, l);
+	if (l > 5)
 	{
 		printf("and is greater than 5\n");
 	}
-	else if (n == 0)
+	else if (l == 0)
 	{
 		printf("and is 0\n");
 	}
