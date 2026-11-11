@@ -9,16 +9,16 @@ int main(void)
 {
 	int a = 48;
 
-	while (a < 71)
+	while (a < 103)
 	{
-		if (a > 47 && a < 58)
+		if (a > 96 && a < 103)
 		{
 			putchar(a);
 			a++;
 		}
 		else if (a == 58)
 		{
-			a = 65;
+			a = 97;
 		}
 		else
 		{
