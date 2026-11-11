@@ -1,0 +1,1 @@
+C-based project teaching arithmetic, logic and relational operators as well as if, if ... else statements, how to use comments, how to declare and print variable types as well as using while loops with variables and print them. ASCII character set and the purpose of gcc flags -m32 and -m64 are also taught.
