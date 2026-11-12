@@ -1,0 +1,1 @@
+Project that teaches nested loops and how to use them, what a function is and how to use them, what the difference between declarations and definitions of a function, what is a prototype, scope of variables and what header files are and how to use them with #include.
