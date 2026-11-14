@@ -1,0 +1,1 @@
+Learning project teaching students about nested loops and how to use them, functiosn and how to use them, difference between declaration and defintiion of functions, prototypes, scope of variables and headers.
