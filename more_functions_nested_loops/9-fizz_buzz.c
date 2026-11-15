@@ -41,5 +41,6 @@ int main(void)
 		c = 1;
 		fb_c = 0;
 	}
+	_putchar(10);
 	return (0);
 }
