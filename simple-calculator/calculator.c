@@ -4,28 +4,41 @@
 #include <ctype.h>
 
 /**
- * main - Initializes function
+ * main - Initializes function & creates the menu you interact with
+ * line_break: Provides a line break that can be called throughout the program
+ *
+ * add_menu: The menu that adds two integers
+ * sub_menu: The menu that subtracts two integers
+ * multi_menu: The menu that multiplies two integers
+ * division_menu: The menu that divides two integers. Cathes 0 and prints error
+ *
+ * This calculator makes decimal based calculations.
+ * It also utilisies the printf() and scanf() operators.
  *
  * Return: returns 0
  */
-/*TODO: now that the calculator can add, we need to let it subtract too.*/ 
 
 void line_break(void)
 {
 	printf("\n-----------------------------------------------\n");
+}
+void n_line_break(void)
+{
+	printf("-----------------------------------------------\n");
 }
 void add_menu(void)
 {
 	int A;
 	int B;
 	
-	printf(" A: ");
+	printf("\n A: ");
 	if (scanf(" %d", &A) == 1)
 	{
 		printf("\n B: ");
 		if (scanf(" %d", &B) == 1)
 		{
-			printf("\n Result: %d", A + B);
+			line_break();
+			printf(" Result: %d", A + B);
 		}
 	}
 }
@@ -35,13 +48,14 @@ void sub_menu(void)
 	int A;
 	int B;
 	
-	printf(" A: ");
+	printf("\n A: ");
 	if (scanf(" %d", &A) == 1)
 	{
 		printf("\n B: ");
 		if (scanf(" %d", &B) == 1)
 		{
-			printf("\n Result: %d", A - B);
+			line_break();
+			printf(" Result: %d", A - B);
 		}
 	}
 }
@@ -51,13 +65,39 @@ void multi_menu(void)
 	int A;
 	int B;
 	
-	printf(" A: ");
+	printf("\n A: ");
 	if (scanf(" %d", &A) == 1)
 	{
 		printf("\n B: ");
 		if (scanf(" %d", &B) == 1)
 		{
-			printf("\n Result: %d", A * B);
+			line_break();
+			printf(" Result: %d", A * B);
+		}
+	}
+}
+
+void division_menu(void)
+{
+	int A;
+	int B;
+	
+	printf("\n A: ");
+	if (scanf(" %d", &A) == 1)
+	{
+		printf("\n B: ");
+		if (scanf(" %d", &B) == 1)
+		{
+			if (B == 0)
+			{
+				line_break();
+				printf(" Error: division by zero");
+			}
+			else
+			{
+				line_break();
+				printf(" Result: %d", A / B);
+			}
 		}
 	}
 }
@@ -66,7 +106,7 @@ int main(void)
 {
 	int choice;
 	
-	/*main_menu(void); */
+	/*main menu*/
 	line_break();
 	printf("  Welcome to Jordan's Simple Calculator (JSC)");
 	line_break();
@@ -77,7 +117,7 @@ int main(void)
 	{	
 		if (choice == 0)
 		{
-			line_break();
+			n_line_break();
 			printf(" The program will close now.\n");
 			printf(" Thank you for using JSC! Bye!");
 			line_break();
@@ -86,31 +126,31 @@ int main(void)
 		}
 		else if (choice == 1)
 		{
-			line_break();
+			n_line_break();
 			add_menu();
 			line_break();
 		}
 		else if (choice == 2)
 		{
-			line_break();
+			n_line_break();
 			sub_menu();
 			line_break();
 		}
 		else if (choice == 3)
 		{
-			line_break();
+			n_line_break();
 			multi_menu();
 			line_break();
 		}
 		else if (choice == 4)
 		{
-			line_break();
-			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			n_line_break();
+			division_menu();
 			line_break();
 		}
-		else 
+		else
 		{
-			line_break();
+			n_line_break();
 			printf(" You chose this weird number: %d\n", choice);
 		       	printf(" Invalid choice try again!");
 			line_break();
@@ -120,4 +160,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-
