@@ -8,8 +8,9 @@ void print_diagonal(int n)
 {
 	int i = 0;
 	int b_sl = 0;
+	int max = n;
 
-	while (n > 0 && b_sl <= n)
+	while (n > 0 && b_sl <= max)
 	{
 		_putchar(92);
 		_putchar(10);
