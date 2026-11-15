@@ -5,4 +5,3 @@ A simple terminal calculator with the following features:
 
 This is a learning project for the C programming language.
 ----------------------------------------------------------
- 

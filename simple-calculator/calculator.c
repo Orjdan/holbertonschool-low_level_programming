@@ -8,7 +8,7 @@
  *
  * Return: returns 0
  */
-/*TODO: Firstly, we need to build a menu using "scanf"*/
+/*TODO: Now that we have a menu that exits in choice 0, we need it to loop the menu.*/ 
 
 void line_break(void)
 {
@@ -35,24 +35,27 @@ int main(void)
 	printf("  Welcome to Jordan's Simple Calculator (JSC)");
 	line_break();
 	printf("\n 1) Add\n 2) Subtract\n 3) Multiply\n 4) Divide\n 0) Quit\n");
+	line_break();
 	printf(" Choice: ");
-	if(scanf(" %d", &choice) == 1)
-	{
-		if (choice == 0)
+	while(scanf(" %d", &choice) == 1)
+	{	
+			if (choice == 0)
 		{
 			line_break();
 			printf(" The program will close now.\n");
 			printf(" Thank you for using JSC! Bye!");
 			line_break();
+			printf("\n");
+			return(0);
 		}
 		else 
 		{
 			line_break();
 			printf(" You chose this weird number: %d\n", choice);
-		       	printf(" I don't know what to do! I have to close now!\n\n");
-			printf(" Thank you for using JSC! Bye!");
+		       	printf(" Invalid choice try again!");
 			line_break();
 		}
+		printf(" Choice: ");
 	}
 	printf("\n");
 	return (0);
