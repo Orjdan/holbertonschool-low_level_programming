@@ -8,23 +8,27 @@
  *
  * Return: returns 0
  */
-/*TODO: Now that we have a menu that exits in choice 0, we need it to loop the menu.*/ 
+/*TODO: now that the menu loops and exits on choice 0, we can start working on the addition feature.*/ 
 
 void line_break(void)
 {
 	printf("\n-----------------------------------------------\n");
 }
-/*int main_menu(char)
+void add_menu(void)
 {
-	printf("\n--------------------------------------------\n");
-	printf("Welcome to Jordan's Simple Calculator (JSC)!");
-	printf("\n--------------------------------------------\n");
-	printf("1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
-	printf("Choice: ");
-}*/
-
-/*int Add_men(char)
- */
+	int A;
+	int B;
+	
+	printf(" A: ");
+	if (scanf(" %d", &A) == 1)
+	{
+		printf("\n B: ");
+		if (scanf(" %d", &B) == 1)
+		{
+			printf("\n Result: %d", A + B);
+		}
+	}
+}
 
 int main(void)
 {
@@ -39,7 +43,7 @@ int main(void)
 	printf(" Choice: ");
 	while(scanf(" %d", &choice) == 1)
 	{	
-			if (choice == 0)
+		if (choice == 0)
 		{
 			line_break();
 			printf(" The program will close now.\n");
@@ -47,6 +51,30 @@ int main(void)
 			line_break();
 			printf("\n");
 			return(0);
+		}
+		else if (choice == 1)
+		{
+			line_break();
+			add_menu();
+			line_break();
+		}
+		else if (choice == 2)
+		{
+			line_break();
+			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			line_break();
+		}
+		else if (choice == 3)
+		{
+			line_break();
+			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			line_break();
+		}
+		else if (choice == 4)
+		{
+			line_break();
+			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			line_break();
 		}
 		else 
 		{
