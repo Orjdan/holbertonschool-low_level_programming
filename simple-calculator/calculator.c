@@ -6,16 +6,17 @@
 /**
  * main - Initializes function & creates the menu you interact with
  * line_break: Provides a line break that can be called throughout the program
+ * n_line_break: Same as line_break but only adds a newline at the end
  *
  * add_menu: The menu that adds two integers
  * sub_menu: The menu that subtracts two integers
  * multi_menu: The menu that multiplies two integers
  * division_menu: The menu that divides two integers. Cathes 0 and prints error
  *
- * This calculator makes decimal based calculations.
- * It also utilisies the printf() and scanf() operators.
+ * This calculator makes decimal based calculations using the stdio.h library
+ * Utilisies 2 functions: printf() for output and scanf() for input
  *
- * Return: returns 0
+ * Return: returns 0 when user chooses to exit, ending the program.
  */
 
 void line_break(void)
