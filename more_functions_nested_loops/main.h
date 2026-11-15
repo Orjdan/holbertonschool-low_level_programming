@@ -6,5 +6,6 @@ int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
 int mul_rp(int r, int p);
+void print_numbers(void);
 
 #endif
