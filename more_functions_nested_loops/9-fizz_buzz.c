@@ -19,23 +19,27 @@ int main(void)
 		{
 			if ((i % 5) == 0)
 			{
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 				fb_c++;
 			}
 			else
 			{
-				printf("Fizz ");
+				printf("Fizz");
 			}
 			c--;
 		}
 		if ((i % 5) == 0 && fb_c != 1)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 			c--;
 		}
 		if (c == 1)
 		{
-			printf("%i ", i);
+			printf("%i", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
 		}
 		i++;
 		c = 1;
