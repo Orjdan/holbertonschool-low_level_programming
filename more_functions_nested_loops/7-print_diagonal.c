@@ -10,19 +10,23 @@ void print_diagonal(int n)
 	int b_sl = 0;
 	int max = n;
 
+	if (n <= 0)
+	{
+		_putchar(10);
+	}
+
 	while (n > 0 && b_sl <= max)
 	{
-		_putchar(92);
-		_putchar(10);
-		b_sl++;
 		i = b_sl;
-		while (b_sl > 0)
+		while (b_sl >= 1)
 		{
 			_putchar(32);
 			b_sl--;
 		}
+		_putchar(92);
+		_putchar(10);
 		b_sl = i;
+		b_sl++;
 		n--;
 	}
-	_putchar(10);
 }
