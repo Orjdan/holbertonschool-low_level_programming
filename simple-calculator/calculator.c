@@ -46,6 +46,22 @@ void sub_menu(void)
 	}
 }
 
+void multi_menu(void)
+{
+	int A;
+	int B;
+	
+	printf(" A: ");
+	if (scanf(" %d", &A) == 1)
+	{
+		printf("\n B: ");
+		if (scanf(" %d", &B) == 1)
+		{
+			printf("\n Result: %d", A * B);
+		}
+	}
+}
+
 int main(void)
 {
 	int choice;
@@ -83,7 +99,7 @@ int main(void)
 		else if (choice == 3)
 		{
 			line_break();
-			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			multi_menu();
 			line_break();
 		}
 		else if (choice == 4)
