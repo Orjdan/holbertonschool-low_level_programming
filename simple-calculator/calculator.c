@@ -8,7 +8,7 @@
  *
  * Return: returns 0
  */
-/*TODO: now that the menu loops and exits on choice 0, we can start working on the addition feature.*/ 
+/*TODO: now that the calculator can add, we need to let it subtract too.*/ 
 
 void line_break(void)
 {
@@ -26,6 +26,22 @@ void add_menu(void)
 		if (scanf(" %d", &B) == 1)
 		{
 			printf("\n Result: %d", A + B);
+		}
+	}
+}
+
+void sub_menu(void)
+{
+	int A;
+	int B;
+	
+	printf(" A: ");
+	if (scanf(" %d", &A) == 1)
+	{
+		printf("\n B: ");
+		if (scanf(" %d", &B) == 1)
+		{
+			printf("\n Result: %d", A - B);
 		}
 	}
 }
@@ -61,7 +77,7 @@ int main(void)
 		else if (choice == 2)
 		{
 			line_break();
-			printf(" HEY THIS CHOICE, %d, WORKS! YIPPE!\n", choice);
+			sub_menu();
 			line_break();
 		}
 		else if (choice == 3)
