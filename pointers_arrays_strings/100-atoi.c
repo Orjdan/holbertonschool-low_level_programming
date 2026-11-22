@@ -3,7 +3,7 @@
 /**
  * _atoi - Function that converts a string into digits.
  * @s: pointer referencing the inputed string.
- * Return: returns r multiplied by it's relative '-' value.
+ * Return: returns r.
  */
 int _atoi(char *s)
 {
@@ -17,7 +17,14 @@ int _atoi(char *s)
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			started = 1;
-			r = r * 10 + (s[i] - '0');
+			if (sign == 1)
+			{
+				r = r * 10 + (s[i] - '0');
+			}
+			else
+			{
+				r = r * 10 - (s[i] - '0');
+			}
 		}
 		else if (started)
 		{
@@ -29,5 +36,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	return (r * sign);
+	return (r);
 }
